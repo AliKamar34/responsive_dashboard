@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:newrespoapp/widgets/all_expenses.dart';
 import 'package:newrespoapp/widgets/custom_drawer.dart';
+import 'package:newrespoapp/widgets/quick_invoice.dart';
 
 class DisktopDashBoardLayout extends StatelessWidget {
   const DisktopDashBoardLayout({super.key});
@@ -18,7 +19,11 @@ class DisktopDashBoardLayout extends StatelessWidget {
           flex: 2,
           child: Column(
             children: [
-              Expanded(child: AllExpenses()),
+              AllExpenses(),
+              SizedBox(
+                height: 24,
+              ),
+              QuickInvoice(),
             ],
           ),
         ),
