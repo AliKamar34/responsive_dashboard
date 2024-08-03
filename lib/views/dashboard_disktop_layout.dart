@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:newrespoapp/widgets/all_expenses.dart';
+import 'package:newrespoapp/widgets/all_expenses_and_quick_invoice_section.dart';
 import 'package:newrespoapp/widgets/custom_drawer.dart';
-import 'package:newrespoapp/widgets/quick_invoice.dart';
+import 'package:newrespoapp/widgets/my_card.dart';
 
 class DisktopDashBoardLayout extends StatelessWidget {
   const DisktopDashBoardLayout({super.key});
@@ -18,22 +18,13 @@ class DisktopDashBoardLayout extends StatelessWidget {
         ),
         Expanded(
           flex: 2,
-          child: CustomScrollView(
-            slivers: [
-              SliverToBoxAdapter(
-                child: SizedBox(
-                  height: 40,
-                ),
-              ),
-              SliverToBoxAdapter(child: AllExpenses()),
-              SliverToBoxAdapter(
-                child: SizedBox(
-                  height: 24,
-                ),
-              ),
-              SliverToBoxAdapter(child: QuickInvoice()),
-            ],
-          ),
+          child: AllExpensesAndQuickInvoiceSection(),
+        ),
+        SizedBox(
+          width: 32,
+        ),
+        Expanded(
+          child: MyCard(),
         ),
       ],
     );

@@ -6,8 +6,8 @@ class Assets {
   static const String imagesAvatar = "assets/images/avatar.svg";
 
   /// Assets for imagesCardBackground
-  /// assets/images/card_background.svg
-  static const String imagesCardBackground = "assets/images/card_background.svg";
+  /// assets/images/card_background.png
+  static const String imagesCardBackground = "assets/images/card_background.png";
 
   /// Assets for imagesCardReceive
   /// assets/images/card-receive.svg
@@ -21,6 +21,10 @@ class Assets {
   /// assets/images/Dashboard.svg
   static const String imagesDashboard = "assets/images/Dashboard.svg";
 
+  /// Assets for imagesGallery
+  /// assets/images/gallery.svg
+  static const String imagesGallery = "assets/images/gallery.svg";
+
   /// Assets for imagesLogout
   /// assets/images/logout.svg
   static const String imagesLogout = "assets/images/logout.svg";
@@ -29,13 +33,13 @@ class Assets {
   /// assets/images/moneys.svg
   static const String imagesMoneys = "assets/images/moneys.svg";
 
-  /// Assets for imagesMy Transaction
-  /// assets/images/my Transaction.svg
-  static const String imagesMyTransaction = "assets/images/my Transaction.svg";
+  /// Assets for imagesMyTransaction
+  /// assets/images/myTransaction.svg
+  static const String imagesMyTransaction = "assets/images/myTransaction.svg";
 
-  /// Assets for imagesMy investments
-  /// assets/images/my investments.svg
-  static const String imagesMyinvestments = "assets/images/my investments.svg";
+  /// Assets for imagesMyinvestments
+  /// assets/images/myinvestments.svg
+  static const String imagesMyinvestments = "assets/images/myinvestments.svg";
 
   /// Assets for imagesSetting
   /// assets/images/setting.svg
