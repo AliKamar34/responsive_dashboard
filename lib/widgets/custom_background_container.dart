@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 class CustomBackgroundContainer extends StatelessWidget {
   const CustomBackgroundContainer({
     super.key,
-    required this.child,
     required this.padding,
+    required this.child,
   });
   final Widget child;
   final double padding;
