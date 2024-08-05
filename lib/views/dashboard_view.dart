@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newrespoapp/utils/size_confige.dart';
 import 'package:newrespoapp/widgets/custom_drawer.dart';
 import 'package:newrespoapp/widgets/dashboard_disktop_layout.dart';
 import 'package:newrespoapp/widgets/adaptive_layout_widget.dart';
@@ -18,9 +19,10 @@ class _DashBoardViewState extends State<DashBoardView> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      drawer:
-          MediaQuery.sizeOf(context).width < 800 ? const CustomDrawer() : null,
-      appBar: MediaQuery.sizeOf(context).width < 800
+      drawer: MediaQuery.sizeOf(context).width < SizeConfige.tablet
+          ? const CustomDrawer()
+          : null,
+      appBar: MediaQuery.sizeOf(context).width < SizeConfige.tablet
           ? AppBar(
               elevation: 0,
               backgroundColor: const Color(0xfffafafa),

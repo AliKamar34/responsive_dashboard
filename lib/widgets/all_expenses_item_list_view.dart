@@ -36,38 +36,47 @@ class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: items.asMap().entries.map((e) {
-        int index = e.key;
-        var item = e.value;
-        if (index == 1) {
-          return Expanded(
-            child: GestureDetector(
-              onTap: () {
-                upDateIndex(index);
-              },
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 6),
-                child: AllExpensesItem(
-                  isSelected: selectedItem == index,
-                  allExpensesItemModel: item,
-                ),
-              ),
+      children: [
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              upDateIndex(0);
+            },
+            child: AllExpensesItem(
+              isSelected: selectedItem == 0,
+              allExpensesItemModel: items[0],
             ),
-          );
-        } else {
-          return Expanded(
-            child: GestureDetector(
-              onTap: () {
-                upDateIndex(index);
-              },
-              child: AllExpensesItem(
-                isSelected: selectedItem == index,
-                allExpensesItemModel: item,
-              ),
+          ),
+        ),
+        const SizedBox(
+          width: 8,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              upDateIndex(1);
+            },
+            child: AllExpensesItem(
+              isSelected: selectedItem == 1,
+              allExpensesItemModel: items[1],
             ),
-          );
-        }
-      }).toList(),
+          ),
+        ),
+        const SizedBox(
+          width: 8,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              upDateIndex(2);
+            },
+            child: AllExpensesItem(
+              isSelected: selectedItem == 2,
+              allExpensesItemModel: items[2],
+            ),
+          ),
+        ),
+      ],
     );
   }
 

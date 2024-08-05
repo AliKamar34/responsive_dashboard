@@ -13,8 +13,7 @@ class MyCard extends StatelessWidget {
       child: Container(
         decoration: ShapeDecoration(
           image: const DecorationImage(
-            fit: BoxFit.fill,
-              image: AssetImage(Assets.imagesCardBackground)),
+              fit: BoxFit.fill, image: AssetImage(Assets.imagesCardBackground)),
           color: const Color(0xff4eb7f2),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
@@ -28,11 +27,12 @@ class MyCard extends StatelessWidget {
                   const EdgeInsets.only(left: 31, right: 31, top: 16),
               title: Text(
                 'Name card',
-                style: AppStyles.styleRegular16.copyWith(color: Colors.white),
+                style: AppStyles.styleRegular16(context)
+                    .copyWith(color: Colors.white),
               ),
-              subtitle: const Text(
+              subtitle: Text(
                 'Syah Bandi',
-                style: AppStyles.styleMeduim20,
+                style: AppStyles.styleMeduim20(context),
               ),
               trailing: SvgPicture.asset(Assets.imagesGallery),
             ),
@@ -44,19 +44,21 @@ class MyCard extends StatelessWidget {
                 children: [
                   Text(
                     '0918 8124 0042 8129',
-                    style:
-                        AppStyles.styleSemiBold24.copyWith(color: Colors.white),
+                    style: AppStyles.styleSemiBold24(context)
+                        .copyWith(color: Colors.white),
                   ),
                   Text(
                     '12/20 - 124',
-                    style:
-                        AppStyles.styleRegular16.copyWith(color: Colors.white),
+                    style: AppStyles.styleRegular16(context)
+                        .copyWith(color: Colors.white),
                   ),
                 ],
               ),
             ),
-            const SizedBox(
-              height: 26,
+            const Flexible(
+              child: SizedBox(
+                height: 26,
+              ),
             )
           ],
         ),
